@@ -7,7 +7,7 @@ Annotating long-horizon robotic demonstrations with precise temporal action boun
 ### ✨ Key Features
 - **Segment-Based Video Playback and Annotation**: Supports per-segment (episode) visualization and annotation of multi-camera video data.
 - **Annotation Editing and Management**: Extending already existing datasets with an easy and interactive annotation process, visualized in a clear manner. 
-- **Flexible Dataset Integration**: Supports ```REASSEMBLE``` and ```RLDS``` dataset types.
+- **Flexible Dataset Integration**: Supports ```REASSEMBLE``` and ```RLDS``` dataset types, as well as generic images, videos and ROS bags.
 - **Configurable Interface**: The GUI settings easily configurable through the config files (shortcut keys, dataset specifics, etc.)
 
 
