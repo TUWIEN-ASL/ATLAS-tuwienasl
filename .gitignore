@@ -1,0 +1,9 @@
+*.h5
+__pycache__
+*.egg-info
+.vscode
+annotations/*/*.json
+data
+vids/
+experiments/
+docs/_build/

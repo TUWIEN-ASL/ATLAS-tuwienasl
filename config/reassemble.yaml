@@ -1,0 +1,57 @@
+dataset_type: reassemble                  # has to match one of the implemented classes
+dataset_name: reassemble
+fps: 15
+
+annotation_storage: json                  # 'h5' or 'json'. h5 overwrites the original data with new annots, json saves annots to external json file
+annotation_dir: annotations/reassemble/   # used when annotation_storage is 'json'
+annotation_group: low_level               # group name in h5 (used when annotation_storage is h5)
+
+low_level_keys:
+  - robot_state/compensated_base_force
+  - robot_state/compensated_base_torque
+  - robot_state/measured_force
+  - robot_state/measured_torque
+  - robot_state/joint_efforts
+  - robot_state/joint_positions
+  - robot_state/joint_velocities
+  - robot_state/gripper_positions
+  - robot_state/pose
+  - robot_state/velocity
+  
+camera_keys:
+  - hama1
+  - hama2
+  # - hand
+  # - capture_node-camera-image             # event camera
+color_format: "BGR"
+
+default_graphs:
+  - robot_state/compensated_base_force
+  - robot_state/gripper_positions
+
+keys:
+  play: Space
+  previous_segment: Q
+  next_segment: E
+  toggle_annotation: S
+  delete_last_annotation: Backspace
+  save_segment_annotation: P
+  fast_forward: D
+  rewind: A
+  fast_forward_small: C
+  rewind_small: Z
+  jump_to_end: F
+
+ff_value_big: 0.1                         # big skip in seconds (100ms)
+ff_value_small: 0.01                      # small skip in seconds (10ms)
+
+action_map:
+  1: Approach
+  2: Grasp
+  3: Lift
+  4: Release
+  5: Align
+  6: Push
+  7: Pull
+  8: Nudge
+  9: Twist

@@ -1,0 +1,52 @@
+dataset_type: rlds
+dataset_name: berkeley_cable_routing    # ~1GB dataset
+fps: 5
+annotation_dir: annotations/berkeley_cable_routing/
+
+# Set download: false and use file dialog to select the dataset folder
+# e.g. ~/tensorflow_datasets/berkeley_cable_routing/0.1.0
+download: false
+data_dir: ~/tensorflow_datasets
+
+# Observation keys (from tfds catalog)
+low_level_keys:
+  - steps/observation/robot_state
+
+camera_keys:
+  - steps/observation/image
+  - steps/observation/top_image
+  - steps/observation/wrist45_image
+color_format: "RGB"
+
+text_keys:
+  - steps/observation/natural_language_instruction
+
+default_graphs:
+  - steps/observation/robot_state
+
+keys:
+  play: Space
+  previous_segment: Q
+  next_segment: E
+  toggle_annotation: S
+  delete_last_annotation: Backspace
+  save_segment_annotation: P
+  fast_forward: D
+  rewind: A
+  fast_forward_small: C
+  rewind_small: Z
+  jump_to_end: F
+
+ff_value_big: 0.2
+ff_value_small: 0.04
+
+action_map:
+  1: Approach
+  2: Grasp
+  3: Lift
+  4: Release
+  5: Align
+  6: Push
+  7: Pull
+  8: Nudge
+  9: Twist

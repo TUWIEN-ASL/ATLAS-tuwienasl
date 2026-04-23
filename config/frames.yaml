@@ -1,0 +1,41 @@
+dataset_type: frames
+dataset_name: frames_test
+fps: 30
+annotation_dir: annotations/frames/
+
+low_level_keys:                  # empty -- no numerical/sensor data
+
+camera_keys:                     # empty -- auto-detected from folder structure
+  # - camera                     # uncomment for single camera with known name
+  # - left_cam                   # uncomment and add entries for known multi-camera setups
+  # - right_cam
+color_format: "BGR"              # cv2.imread loads as BGR by default
+
+default_graphs:                  # empty -- no plots
+
+keys:
+  play: Space
+  previous_segment: Q
+  next_segment: E
+  toggle_annotation: S
+  delete_last_annotation: Backspace
+  save_segment_annotation: P
+  fast_forward: D
+  rewind: A
+  fast_forward_small: C
+  rewind_small: Z
+  jump_to_end: F
+
+ff_value_big: 0.1
+ff_value_small: 0.01
+
+action_map:
+  1: Approach
+  2: Grasp
+  3: Lift
+  4: Release
+  5: Align
+  6: Push
+  7: Pull
+  8: Nudge
+  9: Twist

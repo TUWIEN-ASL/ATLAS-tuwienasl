@@ -1,0 +1,48 @@
+[project]
+name = "atlas_gui"
+version = "0.1.0"
+description = "An Annotation Tool for Long-horizon Robotic Action Segmentation"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE.md" }
+authors = [
+    { name="Sergej Stanovcic", email="sergej.stanovcic@tuwien.ac.at" },
+    { name="Daniel Sliwowski", email="daniel.sliwowski@tuwien.ac.at" }
+]
+maintainers = [
+    { name="Sergej Stanovcic", email="sergej.stanovcic@tuwien.ac.at" }
+]
+dependencies = [
+    "numpy",
+    "opencv-python-headless", 
+    "PyQt5",
+    "matplotlib",
+    "pyqtgraph",
+    "h5py",
+    "tensorflow",
+    "tensorflow-datasets",
+    "PyYAML",
+    "rosbags",
+    "apache_beam",
+    "gsutil"
+]
+
+[project.optional-dependencies]
+docs = [
+    "sphinx",
+    "sphinx_rtd_theme",        
+    "sphinx-autodoc-typehints",
+    "furo"                      
+]
+
+keywords = ["robotics", "segmentation", "gui"]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

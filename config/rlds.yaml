@@ -1,0 +1,52 @@
+dataset_type: rlds                      # has to match one of the implemented classes
+dataset_name: droid_100
+fps: 15                                 # data recorded at 15hz
+annotation_dir: annotations/rlds/       # where to save/write annotations
+
+low_level_keys:
+  - steps/observation/gripper_position
+  - steps/observation/cartesian_position
+  - steps/observation/joint_position
+
+camera_keys:
+  - steps/observation/wrist_image_left
+  - steps/observation/exterior_image_1_left
+  - steps/observation/exterior_image_2_left
+color_format: "RGB"
+
+text_keys:
+  - language_instruction
+  # - language_instruction_2
+  # - language_instruction_3
+
+# which low level keys will be displayed by default in the gui
+default_graphs:
+  - steps/observation/cartesian_position
+  - steps/observation/gripper_position 
+
+keys:
+  play: Space
+  previous_segment: Q
+  next_segment: E
+  toggle_annotation: S
+  delete_last_annotation: Backspace
+  save_segment_annotation: P
+  fast_forward: D
+  rewind: A
+  fast_forward_small: C
+  rewind_small: Z
+  jump_to_end: F
+
+ff_value_big: 0.1                       # big skip in seconds (100ms)
+ff_value_small: 0.01                    # small skip in seconds (10ms)
+
+action_map:
+  1: Approach
+  2: Grasp
+  3: Lift
+  4: Release
+  5: Align
+  6: Push
+  7: Pull
+  8: Nudge
+  9: Twist

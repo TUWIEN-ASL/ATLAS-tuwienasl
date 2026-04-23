@@ -1,0 +1,14 @@
+numpy
+opencv-python-headless
+PyQt5
+matplotlib
+pyqtgraph
+h5py
+tensorflow
+tensorflow-datasets
+PyYAML
+sphinx                      #?
+sphinx_rtd_theme            #?
+sphinx-autodoc-typehints    #?
+furo                        #?
+

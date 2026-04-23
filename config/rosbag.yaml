@@ -1,0 +1,53 @@
+dataset_type: rosbag                      # has to match one of the implemented classes
+dataset_name: my_rosbag_dataset
+fps: 30
+annotation_dir: annotations/rosbag/       # if saving the annotations in json files
+annotation_group: high_level               # the name of the dict entry where annots will be saved within the original data
+
+low_level_keys:
+  - franka_state_controller/O_T_EE
+  - joint_states
+  - ft_sensor/ft_compensated_base
+  
+camera_keys:
+  - cam1
+  - cam2
+  # - /hand
+  # - /capture_node-camera-image             # event camera
+color_format: "BGR"
+
+default_graphs:
+  - franka_state_controller/O_T_EE
+  - ft_sensor/ft_compensated_base
+
+keys:
+  play: Space
+  previous_segment: Q
+  next_segment: E
+  toggle_annotation: S
+  delete_last_annotation: Backspace
+  save_segment_annotation: P
+  fast_forward: D
+  rewind: A
+  fast_forward_small: C
+  rewind_small: Z
+  jump_to_end: F
+
+ff_value_big: 0.1                         # big skip in seconds (100ms)
+ff_value_small: 0.01                      # small skip in seconds (10ms)
+
+# Streaming mode (default: True) - loads camera frames on-demand to save RAM
+# Set to False to load everything into memory (faster playback, more RAM)
+stream_mode: false
+frame_cache_size: 60                      # number of frames to cache in streaming mode
+
+action_map:
+  1: Approach
+  2: Grasp
+  3: Lift
+  4: Release
+  5: Align
+  6: Push
+  7: Pull
+  8: Nudge
+  9: Twist

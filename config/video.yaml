@@ -1,0 +1,39 @@
+dataset_type: video
+dataset_name: video_test
+fps: 30                          # typical video fps
+annotation_dir: annotations/video/
+
+low_level_keys:                  # empty -- no numerical/sensor data
+
+camera_keys:                     # empty -- auto-detected from folder structure
+  # - camera                     # uncomment for single camera with known name
+color_format: "BGR"              # OpenCV decodes as BGR
+
+default_graphs:                  # empty -- no plots
+
+keys:
+  play: Space
+  previous_segment: Q
+  next_segment: E
+  toggle_annotation: S
+  delete_last_annotation: Backspace
+  save_segment_annotation: P
+  fast_forward: D
+  rewind: A
+  fast_forward_small: C
+  rewind_small: Z
+  jump_to_end: F
+
+ff_value_big: 0.5                # bigger skip for video (500ms)
+ff_value_small: 0.033            # ~1 frame at 30fps
+
+action_map:
+  1: Approach
+  2: Grasp
+  3: Lift
+  4: Release
+  5: Align
+  6: Push
+  7: Pull
+  8: Nudge
+  9: Twist
