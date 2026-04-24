@@ -1,6 +1,14 @@
 # ATLAS: An Annotation Tool for Long-horizon Robotic Action Segmentation
 
 
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE.md)
+[![GitHub Stars](https://img.shields.io/github/stars/TUWIEN-ASL/ATLAS-tuwienasl.svg)](https://github.com/TUWIEN-ASL/ATLAS-tuwienasl/stargazers)
+[![Documentation Status](https://readthedocs.org/projects/atlas-tuwienasl/badge/?version=latest)](https://atlas-tuwienasl.readthedocs.io/en/latest/)
+[![GitHub Issues](https://img.shields.io/github/issues/TUWIEN-ASL/ATLAS-tuwienasl.svg)](https://github.com/TUWIEN-ASL/ATLAS-tuwienasl/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/TUWIEN-ASL/ATLAS-tuwienasl.svg)](https://github.com/TUWIEN-ASL/ATLAS-tuwienasl/pulls)
+[![Paper](https://img.shields.io/badge/Paper-coming_soon-lightgrey.svg)]()
+
+
 ## 📋 Abstract
 Annotating long-horizon robotic demonstrations with precise temporal action boundaries is crucial for training and evaluating action segmentation and manipulation policy learning methods. Existing annotation tools, however, are often limited: they are designed primarily for vision-only data, do not natively support synchronized visualization of robot-specific time-series signals (e.g., gripper state or force/torque), or require substantial effort to adapt to different dataset formats. In this paper, we introduce ATLAS, an annotation tool tailored for long-horizon robotic action segmentation. ATLAS provides time-synchronized visualization of multi-modal robotic data, including multi-view video and proprioceptive signals, and supports annotation of action boundaries, action labels, and task outcomes. The tool natively handles widely used robotics dataset formats such as ROS bags and the Reinforcement Learning Dataset (RLDS) format, and provides direct support for specific datasets such as REASSEMBLE. ATLAS can be easily extended to new formats via a modular dataset abstraction layer.  Its keyboard-centric interface minimizes annotation effort and improves efficiency. In experiments on a contact-rich assembly task, ATLAS reduced the average per-action annotation time by at least 6% compared to ELAN, while the inclusion of time-series data improved temporal alignment with expert annotations by more than 2.8% and decreased boundary error fivefold compared to vision-only annotation tools.
 
@@ -34,7 +42,7 @@ cd ATLAS-tuwienasl
 conda create -n gui python=3.10
 conda activate gui
 
-# Install REASSEMBLE package
+# Install ATLAS
 pip install -e .
 
 # To include optional docs dependencies
@@ -85,7 +93,7 @@ When you annotate a segment, you are presented with a dialog box where you shoul
 
 While there is a separate button for saving the annotations you made, they will be automatically saved anyway when you move to the next or the previous segment. 
 
-For more information about the configuration files, please see the documentation.
+For more information about the configuration files, please see the [documentation](https://atlas-tuwienasl.readthedocs.io/).
 
 
 
@@ -96,7 +104,7 @@ In order to use existing RLDS datasets, you need to download them first. If you 
 ```bash
 gsutil -m cp -r gs://gresearch/robotics/<dataset_name> ~/tensorflow_datasets/
 ```
-Replace `<dataset_name>` in the command below with any of the supported names listed in the following dropdown.
+Replace `<dataset_name>` in the command above with any of the supported names listed in the following dropdown.
 <details> <summary><b>Click to view all supported dataset names</b></summary>
      
      'fractal20220817_data'
