@@ -182,7 +182,14 @@ This command will download the ```<dataset_name>``` dataset into the ```tensorfl
 
 
 ## 📖 Citation
-
+```
+@inproceedings{stanovcic2026atlas,
+  title     = {{ATLAS: An Annotation Tool for Long-horizon Robotic Action Segmentation}},
+  author    = {Stanovcic, Sergej and Sliwowski, Daniel and Lee, Dongheui},
+  booktitle = {2026 IEEE International Conference on Advanced Robotics and its Social Impact (ARSO)},
+  year      = {2026}
+}
+```
 ## 📝 License
 This project is released under the MIT License. See [LICENSE.md](LICENSE.md) for details.
 
