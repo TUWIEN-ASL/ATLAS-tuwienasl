@@ -6,7 +6,7 @@
 [![Documentation Status](https://readthedocs.org/projects/atlas-tuwienasl/badge/?version=latest)](https://atlas-tuwienasl.readthedocs.io/en/latest/)
 [![GitHub Issues](https://img.shields.io/github/issues/TUWIEN-ASL/ATLAS-tuwienasl.svg)](https://github.com/TUWIEN-ASL/ATLAS-tuwienasl/issues)
 [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/TUWIEN-ASL/ATLAS-tuwienasl.svg)](https://github.com/TUWIEN-ASL/ATLAS-tuwienasl/pulls)
-[![Paper](https://img.shields.io/badge/Paper-coming_soon-lightgrey.svg)]()
+[![arXiv](https://img.shields.io/badge/arXiv-2604.26637-b31b1b.svg)](https://arxiv.org/abs/2604.26637)
 
 
 ## 📋 Abstract
