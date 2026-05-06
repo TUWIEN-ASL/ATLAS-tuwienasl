@@ -22,8 +22,20 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.napoleon',  # For Google/NumPy-style docstrings
     'sphinx_autodoc_typehints',  # For type hints in docs
-    'sphinx.ext.viewcode'
+    'sphinx.ext.viewcode',
+    'sphinx.ext.extlinks',  # Short aliases for repeated URLs
+    'sphinx_design',  # For tabbed sections
 ]
+
+# Centralized GitHub URL prefixes. Update _GITHUB_BRANCH if the default branch
+# is ever renamed; everything else stays in sync automatically.
+_GITHUB_REPO = 'TUWIEN-ASL/ATLAS-tuwienasl'
+_GITHUB_BRANCH = 'master'
+
+extlinks = {
+    'gh-blob': (f'https://github.com/{_GITHUB_REPO}/blob/{_GITHUB_BRANCH}/%s', '%s'),
+    'gh-tree': (f'https://github.com/{_GITHUB_REPO}/tree/{_GITHUB_BRANCH}/%s', '%s'),
+}
 autodoc_mock_imports = [                                                     
     'cv2',                                                                   
     'numpy',                                                                 
@@ -79,6 +91,7 @@ def process_signature(app, what, name, obj, options, signature, return_annotatio
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = 'furo'
+html_title = 'ATLAS'
 html_static_path = ['_static']
 
 # Control what appears in TOC - this should fix the repetitive class names

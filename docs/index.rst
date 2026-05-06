@@ -3,22 +3,35 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-atlas_gui documentation
-==============================
+ATLAS Documentation
+===================
 
-.. Add your content using ``reStructuredText`` syntax. See the
-.. `reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
-.. documentation for details.
+**ATLAS** is an annotation tool for long-horizon robotic action segmentation.
+It provides time-synchronized visualization of multi-modal robotic data,
+including multi-view video, ROS bags, and proprioceptive signals, and
+supports annotation of action boundaries, action labels, and task outcomes.
 
+The keyboard-centric interface keeps annotation effort low, and a modular
+dataset abstraction layer makes it straightforward to extend ATLAS to new
+formats. Out of the box, the tool supports **REASSEMBLE**, **RLDS**,
+**ROS bags**, generic **video**, and **image sequences**.
 
+.. tip::
+   * **Source code:** `github.com/TUWIEN-ASL/ATLAS-tuwienasl <https://github.com/TUWIEN-ASL/ATLAS-tuwienasl>`_
+   * **Paper:** `arXiv:2604.26637 <https://arxiv.org/abs/2604.26637>`_
+   * **Issues / feature requests:** `GitHub Issues <https://github.com/TUWIEN-ASL/ATLAS-tuwienasl/issues>`_
 
-Welcome to the documentation for ATLAS.
+.. toctree::
+   :maxdepth: 2
+   :caption: User Guide
+
+   quickstart
+   configuration
 
 .. toctree::
    :maxdepth: 2
    :caption: API Reference
 
-   configuration
    modules
 
 Indices and tables
